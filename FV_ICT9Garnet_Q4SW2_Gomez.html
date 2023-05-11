@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>seatwork</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<style>
+	body {
+ 	 background-image: url(gold.jpg); background-attachment: fixed; background-size: cover;
+	}
+	</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<div class="container text-dark text-center" style="background:palegoldenrod">
+		<br>
+		<br>
+		<h1><center>Welocome to the Time Converter</center></h1>
+		<h5><center>Please type any number to get your answer</center></h5>
+		<br>
+		<br>
+      </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		<div class="col-md-6" style="background: darkgoldenrod; margin: auto; width: 50%; padding: 10px;">
+				<h1 style="color: saddlebrown"><center>Seconds to...</center></h1>
+				<br>
+				<center><input type="number" id="Seconds"></center>
+				<br>
+	<center><button onclick="SecMns()"  style="background-color: goldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Minutes</button>
+	<button onclick="SecHrs()"  style="background-color: darkkhaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Hours</button>
+	<button onclick="SecDys()"  style="background-color: khaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Days</button></center>
+			</div>
+
+				<div class="col-md-6 " style="background: goldenrod; margin: auto; width: 50%; padding: 10px;">
+					<h1 style="color: saddlebrown"><center>Minutes to...</center></h1>
+				<br>
+				<center><input type="number" id="Minutes"></center>
+				<br>
+	<center><button onclick="MnsSec()"  style="background-color: darkgoldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Seconds</button>
+	<button onclick="MnsHrs()"  style="background-color: darkkhaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Hours</button>
+	<button onclick="MnsDys()"  style="background-color: khaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Days</button></center>
+				</div>
+
+					<div class="col-md-6 " style="background: darkkhaki; margin: auto; width: 50%; padding: 10px;">
+					<h1 style="color: saddlebrown"><center>Hours to...</center></h1>
+				<br>
+				<center><input type="number" id="Hours"></center>
+				<br>
+	<center><button onclick="HrsSec()"  style="background-color: darkgoldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Seconds</button>
+	<button onclick="HrsMns()"  style="background-color: goldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Minutes</button>
+	<button onclick="HrsDys()"  style="background-color: khaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Days</button></center>
+					</div>
+
+						<div class="col-md-6 " style="background: khaki; margin: auto; width: 50%; padding: 10px;">
+						<h1 style="color: saddlebrown"><center>Days to...</center></h1>
+				<br>
+				<center><input type="number" id="Days"></center>
+				<br>
+	<center><button onclick="DysSec()"  style="background-color: darkgoldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Seconds</button>
+	<button onclick="DysMns()"  style="background-color: goldenrod; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Minutes</button>
+	<button onclick="DysHrs()"  style="background-color: darkkhaki; border: none; color: maroon; padding: 15px 32px:; text-align: center; text-decoration: none;  display: inline-block; font-size: 16px; border-radius: 12px; padding: 14px 40px;">Hours</button></center>
+						</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+<script type="text/javascript">
+	let x;
+	let y;
+	function SecMns(){
+		x = parseInt(document.getElementById ("Seconds").value);
+		y = 60;
+		alert(x / y);
+	}
+	function SecHrs(){
+		x = parseInt(document.getElementById ("Seconds").value);
+		y = 3600;
+		alert(x / y);
+	}
+	function SecDys(){
+		x = parseInt(document.getElementById ("Seconds").value);
+		y = 86400;
+		alert(x / y);
+	}
+	function MnsSec(){
+		x = parseInt(document.getElementById ("Minutes").value);
+		y = 60;
+		alert(x * y);
+	}
+	function MnsHrs(){
+		x = parseInt(document.getElementById ("Minutes").value);
+		y = 60;
+		alert(x / y);
+	}
+	function MnsDys(){
+		x = parseInt(document.getElementById ("Minutes").value);
+		y = 1440;
+		alert(x / y);
+	}
+	function HrsSec(){
+		x = parseInt(document.getElementById ("Hours").value);
+		y = 3600;
+		alert(x * y);
+	}
+	function HrsMns(){
+		x = parseInt(document.getElementById ("Hours").value);
+		y = 60;
+		alert(x * y);
+	}
+	function HrsDys(){
+		x = parseInt(document.getElementById ("Hours").value);
+		y = 24;
+		alert(x / y);
+	}
+	function DysSec(){
+		x = parseInt(document.getElementById ("Days").value);
+		y = 86400;
+		alert(x * y);
+	}
+	function DysMns(){
+		x = parseInt(document.getElementById ("Days").value);
+		y = 1440;
+		alert(x * y);
+	}
+	function DysHrs(){
+		x = parseInt(document.getElementById ("Days").value);
+		y = 24;
+		alert(x * y);
+	}
+	
+
+</script>
+</html>
+
